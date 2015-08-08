@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceDescription catalog="rest" id="test" adapter="rest" adapterName="testAdapter" useNsPrefix="input">
+    <Name>test</Name>
+    <Description></Description>
+    <Schemas>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="/citiesJSON?north=_north_&amp;south=_south_&amp;east=_east_&amp;west=_west_&amp;lang=_lang_&amp;username=_username_" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/citiesJSON?north=_north_&amp;south=_south_&amp;east=_east_&amp;west=_west_&amp;lang=_lang_&amp;username=_username_">
+            <element name="testType">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="0" name="geonames">
+                            <complexType>
+<sequence>
+    <element minOccurs="0" name="fcodeName" type="string"/>
+    <element minOccurs="0" name="toponymName" type="string"/>
+    <element minOccurs="0" name="countrycode" type="string"/>
+    <element minOccurs="0" name="fcl" type="string"/>
+    <element minOccurs="0" name="fclName" type="string"/>
+    <element minOccurs="0" name="name" type="string"/>
+    <element minOccurs="0" name="wikipedia" type="string"/>
+    <element minOccurs="0" name="lng" type="double"/>
+    <element minOccurs="0" name="fcode" type="string"/>
+    <element minOccurs="0" name="geonameId" type="long"/>
+    <element minOccurs="0" name="lat" type="double"/>
+    <element minOccurs="0" name="population" type="long"/>
+</sequence>
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </Schemas>
+    <Resource xmlns:tns="/citiesJSON?north=_north_&amp;south=_south_&amp;east=_east_&amp;west=_west_&amp;lang=_lang_&amp;username=_username_" name="test" type="tns:testType">
+        <Keys/>
+        <Operations>
+            <Operation type="retrieve" procedure="_retrieve">
+                <ProviderAttributes>
+                    <item>
+                        <name>headers</name>
+                        <value>{&quot;Accept&quot;:&quot;application\/json&quot;}</value>
+                    </item>
+                    <item>
+                        <name>httpMethod</name>
+                        <value>GET</value>
+                    </item>
+                    <item>
+                        <name>urlTemplate</name>
+                        <value>citiesJSON?north={north}&amp;south={south}&amp;east={east}&amp;west={west}&amp;lang={lang}&amp;username={username}</value>
+                    </item>
+                </ProviderAttributes>
+                <SystemParameters/>
+            </Operation>
+        </Operations>
+    </Resource>
+    <ProviderAttributes>
+        <item>
+            <name>baseUrl</name>
+            <value>http://api.geonames.org</value>
+        </item>
+        <item>
+            <name>authType</name>
+            <value>NONE</value>
+        </item>
+    </ProviderAttributes>
+    <SystemParameters/>
+</ServiceDescription>
