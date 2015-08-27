@@ -4,7 +4,7 @@
  *  US Government Users Restricted Rights - Use, duplication or
  *  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
  */
-	
+//	
 function _retrieve(params) {	
 	if (!params)
 		return { 'isSuccessful': false, 'errorMsg' : 'params is ' + params};
