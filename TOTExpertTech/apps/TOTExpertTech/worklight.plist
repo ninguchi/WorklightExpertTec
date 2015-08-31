@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>protocol</key> 
+	<key>protocol</key>
 	<string>http</string>
 	<key>host</key>
-	<string>172.16.20.190</string>
+	<string>192.168.1.4</string>
 	<key>port</key>
 	<string>10080</string>
 	<key>wlServerContext</key>
